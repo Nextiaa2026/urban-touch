@@ -28,6 +28,6 @@ export function Typewriter() {
   }, [displayed, deleting, wordIndex]);
 
   return (
-    <span className="text-[#2563eb] typewriter-cursor">{displayed}</span>
+    <span className="text-[#FFCA00] typewriter-cursor">{displayed}</span>
   );
 }

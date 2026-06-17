@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${raleway.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-white text-[#0a0a0a] font-[family-name:var(--font-inter)] antialiased flex flex-col">
+      <body className="min-h-screen bg-white text-[#1D1D1B] font-[family-name:var(--font-inter)] antialiased flex flex-col">
         <Navbar />
         <main className="flex-1 pt-16">
           {children}

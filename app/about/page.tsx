@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "À Propos — Notre Histoire & Nos Valeurs",
@@ -39,8 +40,8 @@ export default function AboutPage() {
       <section className="px-6 pt-16 pb-10 max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <p className="text-[#2563eb] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Notre Histoire</p>
-            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <p className="text-[#FFCA00] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Notre Histoire</p>
+            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               L&apos;Histoire<br />
               <span className="text-[#a1a1aa]">d&apos;Urban Touch</span>
             </h1>
@@ -57,7 +58,7 @@ export default function AboutPage() {
       <section className="px-6 pb-16 max-w-6xl mx-auto w-full">
         <div className="relative w-full h-72 md:h-[420px] rounded-xl overflow-hidden bg-[#f4f4f5]">
           <Image
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
+            src={images.pages.aboutHero}
             alt="Bureau Urban Touch SARL"
             fill
             className="object-cover"
@@ -70,7 +71,7 @@ export default function AboutPage() {
       {/* ── MANIFESTO ── */}
       <section className="border-t border-[#e4e4e7] py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <p className="font-[family-name:var(--font-raleway)] font-bold text-2xl md:text-3xl text-[#0a0a0a] leading-relaxed max-w-3xl">
+          <p className="font-[family-name:var(--font-raleway)] font-bold text-2xl md:text-3xl text-[#1D1D1B] leading-relaxed max-w-3xl">
             <strong>La créativité n&apos;est pas juste notre métier — c&apos;est notre ADN.</strong>{" "}
             <span className="text-[#71717a] font-normal">
               Urban Touch SARL a été fondée pour révolutionner l&apos;engagement des marques à travers le design, le storytelling et l&apos;innovation digitale. Nous avons aidé des marques de tous secteurs à transformer leurs idées en solutions impactantes.
@@ -90,8 +91,8 @@ export default function AboutPage() {
             { value: "15+", label: "Récompenses" },
           ].map((s) => (
             <div key={s.label} className="space-y-1">
-              <p className="font-[family-name:var(--font-raleway)] font-bold text-3xl text-[#0a0a0a]">{s.value}</p>
-              <div className="w-6 h-[2px] bg-[#2563eb]" />
+              <p className="font-[family-name:var(--font-raleway)] font-bold text-3xl text-[#1D1D1B]">{s.value}</p>
+              <div className="w-6 h-[2px] bg-[#FFCA00]" />
               <p className="text-[#71717a] text-sm">{s.label}</p>
             </div>
           ))}
@@ -102,7 +103,7 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               Nos Valeurs<br />
               <span className="text-[#a1a1aa]">Fondamentales</span>
             </h2>
@@ -116,7 +117,7 @@ export default function AboutPage() {
                 key={v.title}
                 className={`p-8 space-y-3 border-[#e4e4e7] ${i < 3 ? "border-r" : ""}`}
               >
-                <h3 className="font-[family-name:var(--font-raleway)] font-bold text-base text-[#0a0a0a]">{v.title}</h3>
+                <h3 className="font-[family-name:var(--font-raleway)] font-bold text-base text-[#1D1D1B]">{v.title}</h3>
                 <p className="text-[#71717a] text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -128,7 +129,7 @@ export default function AboutPage() {
       <section className="border-t border-[#e4e4e7] py-24 px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               Du Concept<br />
               <span className="text-[#a1a1aa]">à la Réalité</span>
             </h2>
@@ -136,9 +137,9 @@ export default function AboutPage() {
           <div className="space-y-0">
             {values.map((v, i) => (
               <div key={v.num} className={`flex gap-6 py-6 ${i < values.length - 1 ? "border-b border-[#e4e4e7]" : ""}`}>
-                <span className="text-[#2563eb] font-mono text-sm font-semibold shrink-0 pt-0.5">{v.num}</span>
+                <span className="text-[#FFCA00] font-mono text-sm font-semibold shrink-0 pt-0.5">{v.num}</span>
                 <div className="space-y-1">
-                  <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#0a0a0a]">{v.title}</h3>
+                  <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#1D1D1B]">{v.title}</h3>
                   <p className="text-[#71717a] text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </div>
@@ -151,7 +152,7 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <h2 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               Les Esprits<br />
               <strong>Derrière Urban Touch</strong>
             </h2>
@@ -161,9 +162,9 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80", name: "Directeur Général", role: "CEO & Fondateur" },
-              { src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80", name: "Responsable Marketing", role: "Head of Marketing" },
-              { src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80", name: "Directeur Créatif", role: "Creative Director" },
+              { src: images.team.ceo, name: "Directeur Général", role: "CEO & Fondateur" },
+              { src: images.team.marketingLead, name: "Responsable Marketing", role: "Head of Marketing" },
+              { src: images.team.creativeDirector, name: "Directeur Créatif", role: "Creative Director" },
             ].map((m) => (
               <div key={m.name} className="space-y-3">
                 <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-[#f4f4f5]">
@@ -176,7 +177,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div>
-                  <p className="font-[family-name:var(--font-raleway)] font-bold text-[#0a0a0a]">{m.name}</p>
+                  <p className="font-[family-name:var(--font-raleway)] font-bold text-[#1D1D1B]">{m.name}</p>
                   <p className="text-[#71717a] text-sm">{m.role}</p>
                 </div>
               </div>
@@ -184,7 +185,7 @@ export default function AboutPage() {
           </div>
           <Link
             href="/team"
-            className="inline-flex items-center gap-2 text-[#2563eb] font-semibold text-sm hover:underline"
+            className="inline-flex items-center gap-2 text-[#FFCA00] font-semibold text-sm hover:underline"
           >
             Voir toute l&apos;équipe <ArrowRight className="w-4 h-4" />
           </Link>

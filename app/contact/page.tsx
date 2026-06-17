@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact — Devis Gratuit & Sans Engagement",
@@ -23,8 +24,8 @@ export default function ContactPage() {
       <section className="px-6 pt-16 pb-16 max-w-6xl mx-auto w-full border-b border-[#e4e4e7]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
           <div>
-            <p className="text-[#2563eb] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Parlons-nous</p>
-            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <p className="text-[#FFCA00] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Parlons-nous</p>
+            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               Créons Quelque<br />
               <span className="text-[#a1a1aa]">Chose Ensemble</span>
             </h1>
@@ -50,11 +51,11 @@ export default function ContactPage() {
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-start gap-4 pb-6 border-b border-[#e4e4e7] last:border-0">
                   <div className="w-10 h-10 bg-[#eff6ff] rounded flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-[#2563eb]" />
+                    <Icon className="w-5 h-5 text-[#FFCA00]" />
                   </div>
                   <div>
                     <p className="text-[#a1a1aa] text-xs uppercase tracking-widest mb-1">{label}</p>
-                    <p className="text-[#0a0a0a] font-semibold">{value}</p>
+                    <p className="text-[#1D1D1B] font-semibold">{value}</p>
                   </div>
                 </div>
               ))}
@@ -63,7 +64,7 @@ export default function ContactPage() {
             {/* Office image */}
             <div className="relative w-full h-52 rounded-lg overflow-hidden bg-[#f4f4f5]">
               <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                src={images.pages.contactOffice}
                 alt="Bureau Urban Touch SARL"
                 fill
                 className="object-cover"
@@ -74,7 +75,7 @@ export default function ContactPage() {
 
           {/* CTA card */}
           <div className="space-y-8">
-            <div className="bg-[#0a0a0a] rounded-xl p-8 md:p-10 space-y-6">
+            <div className="bg-[#1D1D1B] rounded-xl p-8 md:p-10 space-y-6">
               <div className="space-y-2">
                 <p className="text-white/40 text-xs tracking-[0.2em] uppercase">Devis Gratuit</p>
                 <h2 className="font-[family-name:var(--font-raleway)] font-bold text-2xl text-white leading-tight">
@@ -83,7 +84,7 @@ export default function ContactPage() {
               </div>
               <a
                 href="mailto:contact@urbantouch.cm"
-                className="flex items-center justify-center bg-[#2563eb] text-white font-semibold text-sm px-6 py-4 rounded hover:bg-[#1d4ed8] transition-colors w-full"
+                className="flex items-center justify-center bg-[#FFCA00] text-[#1D1D1B] font-semibold text-sm px-6 py-4 rounded hover:bg-[#E6B800] transition-colors w-full"
               >
                 Envoyer un Email
               </a>
@@ -93,7 +94,7 @@ export default function ContactPage() {
             </div>
 
             <div className="border border-[#e4e4e7] rounded-xl p-8 space-y-4">
-              <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#0a0a0a]">
+              <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#1D1D1B]">
                 Pourquoi choisir Urban Touch ?
               </h3>
               <ul className="space-y-3">
@@ -104,7 +105,7 @@ export default function ContactPage() {
                   "Résultats mesurables et transparents",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-[#52525b] text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#2563eb] shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#FFCA00] shrink-0" />
                     {item}
                   </li>
                 ))}

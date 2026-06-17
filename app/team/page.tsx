@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Notre Équipe — Experts Marketing & Communication",
@@ -15,12 +16,12 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { name: "Directeur Général", role: "CEO & Fondateur", bio: "Visionnaire et stratège, il guide Urban Touch vers l'excellence depuis 2021 avec une passion pour le marketing africain.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" },
-  { name: "Responsable Marketing", role: "Head of Marketing", bio: "Experte en stratégies digitales et campagnes de communication innovantes adaptées au marché camerounais.", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" },
-  { name: "Directeur Créatif", role: "Creative Director", bio: "Artiste et concepteur, il donne vie aux identités visuelles de nos clients avec un sens aigu de l'esthétique.", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" },
-  { name: "Chargé de Clientèle", role: "Account Manager", bio: "Interface entre nos clients et nos équipes, garant de la satisfaction et du respect des délais.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
-  { name: "Spécialiste Digital", role: "Digital Specialist", bio: "Expert en marketing digital, SEO et gestion des réseaux sociaux pour une présence en ligne optimale.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
-  { name: "Chargée de Communication", role: "Communication Officer", bio: "Rédactrice et communicante, elle crée des contenus engageants qui parlent à votre audience cible.", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
+  { name: "Directeur Général", role: "CEO & Fondateur", bio: "Visionnaire et stratège, il guide Urban Touch vers l'excellence depuis 2021 avec une passion pour le marketing africain.", img: images.team.ceo },
+  { name: "Responsable Marketing", role: "Head of Marketing", bio: "Experte en stratégies digitales et campagnes de communication innovantes adaptées au marché camerounais.", img: images.team.marketingLead },
+  { name: "Directeur Créatif", role: "Creative Director", bio: "Artiste et concepteur, il donne vie aux identités visuelles de nos clients avec un sens aigu de l'esthétique.", img: images.team.creativeDirector },
+  { name: "Chargé de Clientèle", role: "Account Manager", bio: "Interface entre nos clients et nos équipes, garant de la satisfaction et du respect des délais.", img: images.team.accountManager },
+  { name: "Spécialiste Digital", role: "Digital Specialist", bio: "Expert en marketing digital, SEO et gestion des réseaux sociaux pour une présence en ligne optimale.", img: images.team.digitalSpecialist },
+  { name: "Chargée de Communication", role: "Communication Officer", bio: "Rédactrice et communicante, elle crée des contenus engageants qui parlent à votre audience cible.", img: images.team.communicationOfficer },
 ];
 
 export default function TeamPage() {
@@ -31,8 +32,8 @@ export default function TeamPage() {
       <section className="px-6 pt-16 pb-16 max-w-6xl mx-auto w-full border-b border-[#e4e4e7]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
           <div>
-            <p className="text-[#2563eb] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Notre Équipe</p>
-            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#0a0a0a] leading-tight">
+            <p className="text-[#FFCA00] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Notre Équipe</p>
+            <h1 className="font-[family-name:var(--font-raleway)] font-bold text-4xl md:text-5xl text-[#1D1D1B] leading-tight">
               Les Esprits<br />
               <strong>Derrière Urban Touch</strong>
             </h1>
@@ -47,14 +48,14 @@ export default function TeamPage() {
       <section className="px-6 py-12 max-w-6xl mx-auto w-full">
         <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+            src={images.team.banner}
             alt="Équipe Urban Touch SARL au travail"
             fill
             className="object-cover"
             sizes="(max-width: 1200px) 100vw, 1200px"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/85 via-[#0a0a0a]/35 to-transparent md:bg-gradient-to-r md:from-[#0a0a0a]/70 md:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1D1D1B]/85 via-[#1D1D1B]/35 to-transparent md:bg-gradient-to-r md:from-[#1D1D1B]/70 md:to-transparent" />
           <div className="absolute inset-0 p-6 md:p-12 flex items-end">
             <p className="text-white font-[family-name:var(--font-raleway)] font-bold text-xl md:text-3xl max-w-md leading-tight">
               Passionnés par l&apos;excellence et les résultats extraordinaires.
@@ -78,8 +79,8 @@ export default function TeamPage() {
                 />
               </div>
               <div className="space-y-1">
-                <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#0a0a0a]">{member.name}</h3>
-                <p className="text-[#2563eb] text-sm font-medium">{member.role}</p>
+                <h3 className="font-[family-name:var(--font-raleway)] font-bold text-lg text-[#1D1D1B]">{member.name}</h3>
+                <p className="text-[#FFCA00] text-sm font-medium">{member.role}</p>
                 <p className="text-[#71717a] text-sm leading-relaxed pt-1">{member.bio}</p>
               </div>
             </div>
@@ -90,7 +91,7 @@ export default function TeamPage() {
       {/* ── AWARDS ── */}
       <section className="border-t border-[#e4e4e7] py-20 px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto space-y-8">
-          <h2 className="font-[family-name:var(--font-raleway)] font-bold text-3xl text-[#0a0a0a]">Récompenses</h2>
+          <h2 className="font-[family-name:var(--font-raleway)] font-bold text-3xl text-[#1D1D1B]">Récompenses</h2>
           <div className="space-y-0">
             {[
               { year: "2023", title: "Meilleure Agence Marketing Cameroun", org: "Reconnu pour l'excellence en branding et communication" },
@@ -100,7 +101,7 @@ export default function TeamPage() {
               <div key={a.year} className={`flex items-start justify-between gap-8 py-6 ${i < 2 ? "border-b border-[#e4e4e7]" : ""}`}>
                 <span className="font-[family-name:var(--font-raleway)] font-bold text-2xl text-[#d4d4d8] shrink-0">{a.year}</span>
                 <div className="flex-1">
-                  <p className="font-[family-name:var(--font-raleway)] font-bold text-[#0a0a0a]">{a.title}</p>
+                  <p className="font-[family-name:var(--font-raleway)] font-bold text-[#1D1D1B]">{a.title}</p>
                 </div>
                 <p className="text-[#71717a] text-sm text-right max-w-xs hidden md:block">{a.org}</p>
               </div>

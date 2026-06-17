@@ -41,33 +41,36 @@
 }
 
 :root {
+  --brand-yellow: #ffca00;
+  --brand-yellow-hover: #e6b800;
+  --brand-black: #1d1d1b;
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #1d1d1b;
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
+  --card-foreground: #1d1d1b;
   --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #2563eb;
-  --primary-foreground: #ffffff;
+  --popover-foreground: #1d1d1b;
+  --primary: #ffca00;
+  --primary-foreground: #1d1d1b;
   --secondary: #f4f4f5;
-  --secondary-foreground: #0a0a0a;
+  --secondary-foreground: #1d1d1b;
   --muted: #f4f4f5;
   --muted-foreground: #71717a;
-  --accent: #eff6ff;
-  --accent-foreground: #1d4ed8;
+  --accent: #fff8d6;
+  --accent-foreground: #1d1d1b;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #e4e4e7;
   --input: #e4e4e7;
-  --ring: #2563eb;
+  --ring: #ffca00;
   --radius: 0.5rem;
   --sidebar: #fafafa;
-  --sidebar-foreground: #0a0a0a;
-  --sidebar-primary: #2563eb;
-  --sidebar-primary-foreground: #ffffff;
+  --sidebar-foreground: #1d1d1b;
+  --sidebar-primary: #ffca00;
+  --sidebar-primary-foreground: #1d1d1b;
   --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-accent-foreground: #1d1d1b;
   --sidebar-border: #e4e4e7;
-  --sidebar-ring: #2563eb;
+  --sidebar-ring: #ffca00;
 }
 
 @layer base {
@@ -126,7 +129,7 @@
   content: "|";
   display: inline-block;
   margin-left: 2px;
-  color: #2563eb;
+  color: #ffca00;
   animation: blink 1s step-end infinite;
 }
 
@@ -194,4 +197,18 @@
 .scrollbar-none {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* Fullscreen showcase — soft vignette fade into page background */
+.fullscreen-edge-fade {
+  background:
+    radial-gradient(ellipse 90% 75% at 50% 50%, transparent 25%, var(--fade-color) 100%),
+    linear-gradient(to bottom, var(--fade-color) 0%, transparent 20%, transparent 80%, var(--fade-color) 100%),
+    linear-gradient(to right, var(--fade-color) 0%, transparent 16%, transparent 84%, var(--fade-color) 100%);
+}
+
+.fullscreen-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
